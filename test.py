@@ -55,4 +55,4 @@ p.add_layout(labels)
 
 curdoc().title = "Hello, world!"
 curdoc().add_root(p)
-show(p)
+# show(p)
