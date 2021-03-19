@@ -32,6 +32,7 @@ colors = [plt.cm.jet(i/float(len(unique)-1)) for i in range(num_clusters)]
 
 ## Bokeh
 from bokeh.plotting import figure, output_file, show
+from bokeh.io import curdoc
 # from bokeh.io import output_notebook
 # from bokeh.resources import INLINE, CDN
 # output_notebook(INLINE)
@@ -51,4 +52,7 @@ p.scatter(source=source1, x="x", y="y", color="colors", fill_alpha=0.7, size=5)
 labels = LabelSet(x='x', y='y', text='lang', text_font_size='12px',
               x_offset=5, y_offset=5, source=source1, render_mode='canvas')
 p.add_layout(labels)
+
+curdoc().title = "Hello, world!"
+curdoc().add_root(p)
 show(p)
