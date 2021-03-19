@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.cm as cm
 
-P31_obj_data1 = pd.read_csv('bokeh-test-data.tsv', sep='\t')
+P31_obj_data1 = pd.read_csv('bokeh-test-data.tsv', sep='\t', index_col=[0])
 print("data shape (LANGS x sets): " + str(P31_obj_data1.shape))
 
 # t-SNE
