@@ -31,8 +31,8 @@ colors = [plt.cm.jet(i/float(len(unique)-1)) for i in range(num_clusters)]
 
 
 ## Bokeh
-from bokeh.plotting import figure, output_file, show
-from bokeh.io import curdoc
+from bokeh.plotting import figure, output_file, show, curdoc
+# from bokeh.io import curdoc
 # from bokeh.io import output_notebook
 # from bokeh.resources import INLINE, CDN
 # output_notebook(INLINE)
