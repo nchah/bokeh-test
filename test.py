@@ -7,6 +7,7 @@ TOOLS="hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,undo,redo,reset,
 
 source1_data = pickle.load(open('source1.pickle','rb'))
 source1 = ColumnDataSource( source1_data )
+print('> pickled data loaded')
 
 p = figure(title = "Clusters of language locales by P31_obj_set localization frequency",
            tools=TOOLS, toolbar_location='below',
@@ -17,5 +18,6 @@ labels = LabelSet(x='x', y='y', text='lang', text_font_size='12px',
               x_offset=5, y_offset=5, source=source1, render_mode='canvas')
 p.add_layout(labels)
 
-curdoc().title = "Hello, world!"
+curdoc().title = ""
 curdoc().add_root(p)
+print('> done')
