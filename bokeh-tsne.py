@@ -82,7 +82,7 @@ menu_items = [None,
 d = Dropdown(label='Load dataset...', width=500, menu=menu_items,
              button_type='primary',
              # background='blue',
-             margin=(5, 5, 5, 20),
+             # margin=(5, 5, 5, 20)
              )
 d.on_click(handler)
 
