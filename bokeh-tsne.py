@@ -4,7 +4,7 @@ import pickle
 from bokeh.plotting import figure, output_file, show, curdoc
 from bokeh.models import ColumnDataSource, Label, LabelSet, Button, Dropdown, CustomJS
 from bokeh.layouts import row, column
-
+from bokeh.themes import built_in_themes
 
 
 def handler(event):
@@ -39,7 +39,7 @@ source1 = ColumnDataSource()
 
 # Figure and Dropdown menu
 p = figure(title = "Clusters of language locales by P31_obj_set localization frequency",
-           background_fill_color='lightgrey',
+           background_fill_color='whitesmoke',  # gainsboro
            tools=TOOLS, toolbar_location='below',
            aspect_ratio=2,
            # plot_width=1500, plot_height=800,
@@ -79,12 +79,17 @@ menu_items = [None,
     'source1-tsnePerp40-LRate200-Iters7000-AvgSilhouette0.65836734.pickle',
     'source1-tsnePerp40-LRate200-Iters10000-AvgSilhouette0.6608401.pickle']
 
-d = Dropdown(label='Load dataset...', width=500, menu=menu_items)
+d = Dropdown(label='Load dataset...', width=500, menu=menu_items,
+             button_type='primary',
+             # background='blue',
+             margin=(5, 5, 5, 20),
+             )
 d.on_click(handler)
 
 
 
 curdoc().title = "Bokeh Application"
+# curdoc().theme = "dark_minimal"
 curdoc().add_root(p)
 curdoc().add_root(d)
 
