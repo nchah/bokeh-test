@@ -81,7 +81,8 @@ def checkbox_handler(event):
 
 
 ## Globals ##
-TOOLS="hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,undo,redo,reset,tap,save,box_select,poly_select,lasso_select"
+TOOLS="wheel_zoom,hover,crosshair,pan,zoom_in,zoom_out,box_zoom,undo,redo,reset,save"
+# TOOLS="wheel_zoom,zoom_in,zoom_out,reset,save"
 runtime = 0
 source1 = ColumnDataSource()
 show_labels = True
@@ -97,7 +98,8 @@ p = figure(title = "Clusters of language locales by P31_obj_set localization fre
            # width_policy='max',
            # max_width=5000,
            sizing_mode='stretch_both',
-           tooltips=[('lang', '@lang')] )
+           tooltips=[('lang', '@lang')],
+           active_scroll='wheel_zoom')
 
 menu_items = [' ',
      ' = = = = = = = = = = Top silhouette score:',
