@@ -2,37 +2,36 @@
 import pandas as pd
 import pickle
 from bokeh.plotting import figure, output_file, show, curdoc
-from bokeh.models import ColumnDataSource, Div, Label, LabelSet, Button, Dropdown, Select, CustomJS, CheckboxGroup, Paragraph
+from bokeh.models import HoverTool, ColumnDataSource, Div, Label, LabelSet, Button, Dropdown, Select, CustomJS, CheckboxGroup, Paragraph
 from bokeh.layouts import row, column
 from bokeh.themes import built_in_themes, Theme
 
 
-def handler(event):
-    global runtime, source1, show_labels
+# def handler(event):
+#     global runtime, source1, show_labels
+#     # Load from source, then update data source on additional selections
+#     print('source1 data: ' + event.item)
+#     if runtime == 0:
+#         source1_data = pickle.load(open('source1-data/' + event.item,'rb'))
+#         source1_df = pd.DataFrame(source1_data, columns=source1_data.keys())
+#         source1 = ColumnDataSource(source1_df)  # can also load directly from dict instead of pandas
+#     elif runtime > 0:
+#         source1.data = pickle.load(open('source1-data/' + event.item,'rb'))
 
-    # Load from source, then update data source on additional selections
-    print('source1 data: ' + event.item)
-    if runtime == 0:
-        source1_data = pickle.load(open('source1-data/' + event.item,'rb'))
-        source1_df = pd.DataFrame(source1_data, columns=source1_data.keys())
-        source1 = ColumnDataSource(source1_df)  # can also load directly from dict instead of pandas
-    elif runtime > 0:
-        source1.data = pickle.load(open('source1-data/' + event.item,'rb'))
+#     # Scatter plot
+#     p.scatter(source=source1, x="x", y="y", color="colors", fill_alpha=0.7, size=5)
 
-    # Scatter plot
-    p.scatter(source=source1, x="x", y="y", color="colors", fill_alpha=0.7, size=5)
+#     # Add node labels
+#     print("check: " + str(show_labels))
+#     if show_labels == True:
+#         labels = LabelSet(x='x', y='y', text='lang', text_font_size='12px',
+#                 x_offset=5, y_offset=5, source=source1,
+#                 render_mode='canvas') #render_mode='canvas')
+#         p.add_layout(labels)
+#     elif show_labels == False:
+#         pass
 
-    # Add node labels
-    print("check: " + str(show_labels))
-    if show_labels == True:
-        labels = LabelSet(x='x', y='y', text='lang', text_font_size='12px',
-                x_offset=5, y_offset=5, source=source1,
-                render_mode='canvas') #render_mode='canvas')
-        p.add_layout(labels)
-    elif show_labels == False:
-        pass
-
-    runtime += 1
+#     runtime += 1
 
 
 def button_handler(event):
@@ -50,6 +49,7 @@ def button_handler(event):
 
     # Scatter plot
     p.scatter(source=source1, x="x", y="y", color="colors", fill_alpha=0.7, size=5)
+    p.add_tools(HoverTool(tooltips=[("language:", "@lang")]))
 
     # Add node labels
     print("show_labels: " + str(show_labels))
@@ -91,14 +91,15 @@ show_labels = True
 # Figure and Dropdown menu
 p = figure(title = "Clusters of language locales by P31_obj_set localization frequency",
            background_fill_color='whitesmoke',  # gainsboro
-           tools=TOOLS, toolbar_location='below',
+           # tools=TOOLS, 
+           toolbar_location='below',
            aspect_ratio=2,
            # plot_height=1000,
            # plot_width=2000, 
            # width_policy='max',
            # max_width=5000,
            sizing_mode='stretch_both',
-           tooltips=[('lang', '@lang')],
+           tooltips=[("language:", "@lang")],
            active_scroll='wheel_zoom')
 
 menu_items = [' ',
