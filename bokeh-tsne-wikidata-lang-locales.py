@@ -41,15 +41,15 @@ def button_handler(event):
     sourcefile = "source1-" + s.value.replace(": ", "_").replace(", ", "-") + ".pickle"
     print('source1 data: ' + s.value)
     if runtime == 0:
-        source1_data = pickle.load(open('source1-data/' + sourcefile,'rb'))
+        source1_data = pickle.load(open('source1-data-langs/' + sourcefile,'rb'))
         source1_df = pd.DataFrame(source1_data, columns=source1_data.keys())
         source1 = ColumnDataSource(source1_df)  # can also load directly from dict instead of pandas
     elif runtime > 0:
-        source1.data = pickle.load(open('source1-data/' + sourcefile,'rb'))
+        source1.data = pickle.load(open('source1-data-langs/' + sourcefile,'rb'))
 
     # Scatter plot
     p.scatter(source=source1, x="x", y="y", color="colors", fill_alpha=0.7, size=5)
-    p.add_tools(HoverTool(tooltips=[("language:", "@lang")]))
+    p.add_tools(HoverTool(tooltips=[("language", "@lang")]))
 
     # Add node labels
     print("show_labels: " + str(show_labels))
