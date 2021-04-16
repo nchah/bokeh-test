@@ -103,38 +103,42 @@ p = figure(title = "Clusters of language locales by P31_obj_set localization fre
            active_scroll='wheel_zoom')
 
 menu_items = [' ',
-     ' = = = = = = = = = = Top silhouette score:',
-     'source1-tSNE_Perplexity_30-LearningRate_200-Iterations_10000-AvgSilhouette_0.75128967.pickle',
-     ' = = = = = = = = = = ',
-     'source1-tSNE_Perplexity_5-LearningRate_100-Iterations_5000-AvgSilhouette_0.4785947.pickle',
-     'source1-tSNE_Perplexity_5-LearningRate_100-Iterations_7000-AvgSilhouette_0.49775645.pickle',
-     'source1-tSNE_Perplexity_5-LearningRate_100-Iterations_10000-AvgSilhouette_0.5356258.pickle',
-     'source1-tSNE_Perplexity_5-LearningRate_200-Iterations_5000-AvgSilhouette_0.49838758.pickle',
-     'source1-tSNE_Perplexity_5-LearningRate_200-Iterations_7000-AvgSilhouette_0.5186522.pickle',
-     'source1-tSNE_Perplexity_5-LearningRate_200-Iterations_10000-AvgSilhouette_0.5187296.pickle',
-     'source1-tSNE_Perplexity_10-LearningRate_100-Iterations_5000-AvgSilhouette_0.57772136.pickle',
-     'source1-tSNE_Perplexity_10-LearningRate_100-Iterations_7000-AvgSilhouette_0.62639225.pickle',
-     'source1-tSNE_Perplexity_10-LearningRate_100-Iterations_10000-AvgSilhouette_0.61021835.pickle',
-     'source1-tSNE_Perplexity_10-LearningRate_200-Iterations_5000-AvgSilhouette_0.5979305.pickle',
-     'source1-tSNE_Perplexity_10-LearningRate_200-Iterations_7000-AvgSilhouette_0.61925894.pickle',
-     'source1-tSNE_Perplexity_10-LearningRate_200-Iterations_10000-AvgSilhouette_0.6511983.pickle',
-     'source1-tSNE_Perplexity_20-LearningRate_100-Iterations_5000-AvgSilhouette_0.7157357.pickle',
-     'source1-tSNE_Perplexity_20-LearningRate_100-Iterations_7000-AvgSilhouette_0.7004581.pickle',
-     'source1-tSNE_Perplexity_20-LearningRate_100-Iterations_10000-AvgSilhouette_0.69702715.pickle',
-     'source1-tSNE_Perplexity_20-LearningRate_200-Iterations_5000-AvgSilhouette_0.70806557.pickle',
-     'source1-tSNE_Perplexity_20-LearningRate_200-Iterations_7000-AvgSilhouette_0.7114242.pickle',
-     'source1-tSNE_Perplexity_20-LearningRate_200-Iterations_10000-AvgSilhouette_0.7106504.pickle',
-     'source1-tSNE_Perplexity_30-LearningRate_100-Iterations_5000-AvgSilhouette_0.73832816.pickle',
-     'source1-tSNE_Perplexity_30-LearningRate_100-Iterations_7000-AvgSilhouette_0.73323584.pickle',
-     'source1-tSNE_Perplexity_30-LearningRate_100-Iterations_10000-AvgSilhouette_0.7391591.pickle',
-     'source1-tSNE_Perplexity_30-LearningRate_200-Iterations_5000-AvgSilhouette_0.74823016.pickle',
-     'source1-tSNE_Perplexity_30-LearningRate_200-Iterations_7000-AvgSilhouette_0.7375945.pickle',
-     'source1-tSNE_Perplexity_40-LearningRate_100-Iterations_5000-AvgSilhouette_0.6475928.pickle',
-     'source1-tSNE_Perplexity_40-LearningRate_100-Iterations_7000-AvgSilhouette_0.65679246.pickle',
-     'source1-tSNE_Perplexity_40-LearningRate_100-Iterations_10000-AvgSilhouette_0.6665348.pickle',
-     'source1-tSNE_Perplexity_40-LearningRate_200-Iterations_5000-AvgSilhouette_0.6544822.pickle',
-     'source1-tSNE_Perplexity_40-LearningRate_200-Iterations_7000-AvgSilhouette_0.6542868.pickle',
-     'source1-tSNE_Perplexity_40-LearningRate_200-Iterations_10000-AvgSilhouette_0.6557168.pickle']
+    ' = = = = = = = = = = Top silhouette score:',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_250-Iterations_7500-KmeansClusters_5-AvgSilhouette_0.7843169.pickle',
+    ' = = = = = = = = = = ',
+    'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.5356258.pickle',
+    'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.4785947.pickle',
+    'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.49775645.pickle',
+    'source1-tSNE-Langs-Perplexity_5-LearningRate_200-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.5187296.pickle',
+    'source1-tSNE-Langs-Perplexity_5-LearningRate_200-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.49838758.pickle',
+    'source1-tSNE-Langs-Perplexity_5-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.5186522.pickle'
+    'source1-tSNE-Langs-Perplexity_10-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.61021835.pickle',
+    'source1-tSNE-Langs-Perplexity_10-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.57772136.pickle',
+    'source1-tSNE-Langs-Perplexity_10-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.62639225.pickle',
+    'source1-tSNE-Langs-Perplexity_10-LearningRate_200-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.6511983.pickle',
+    'source1-tSNE-Langs-Perplexity_10-LearningRate_200-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.5979305.pickle',
+    'source1-tSNE-Langs-Perplexity_10-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.61925894.pickle',
+    'source1-tSNE-Langs-Perplexity_20-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.69702715.pickle',
+    'source1-tSNE-Langs-Perplexity_20-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.7157357.pickle',
+    'source1-tSNE-Langs-Perplexity_20-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.7004581.pickle',
+    'source1-tSNE-Langs-Perplexity_20-LearningRate_200-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.7106504.pickle',
+    'source1-tSNE-Langs-Perplexity_20-LearningRate_200-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.70806557.pickle',
+    'source1-tSNE-Langs-Perplexity_20-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.7114242.pickle',
+    'source1-tSNE-Langs-Perplexity_25-LearningRate_300-Iterations_5000-KmeansClusters_4-AvgSilhouette_0.76430476.pickle',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.7391591.pickle',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.73832816.pickle',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.73323584.pickle',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_200-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.75128967.pickle',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_200-Iterations_12500-KmeansClusters_5-AvgSilhouette_0.7766407.pickle',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_200-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.74823016.pickle',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.7375945.pickle',
+    'source1-tSNE-Langs-Perplexity_40-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.6665348.pickle',
+    'source1-tSNE-Langs-Perplexity_40-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.6475928.pickle',
+    'source1-tSNE-Langs-Perplexity_40-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.65679246.pickle',
+    'source1-tSNE-Langs-Perplexity_40-LearningRate_200-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.6557168.pickle',
+    'source1-tSNE-Langs-Perplexity_40-LearningRate_200-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.6544822.pickle',
+    'source1-tSNE-Langs-Perplexity_40-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.6542868.pickle'
+]
 # Formatting text for readability in dropdown
 menu_items = [ m.replace("source1-", "")
                 .replace(".pickle", "")
@@ -158,7 +162,7 @@ b.on_click(button_handler)
 
 
 div = Div(text="""
-          Select settings and click "Load Visualization"<br>(1) Node labels on or off, <br>(2) Dataset source
+          Select the following settings and click "Load Visualization":<br>(1) Node labels on or off, <br>(2) Dataset source
           <br> <hr> """, 
           width=500, height=100, style={'font-size': '14px'})
 

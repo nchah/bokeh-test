@@ -77,9 +77,12 @@ p = figure(title = "Clusters of P31_obj_set by their localization frequency acro
 
 menu_items = [' ',
     ' = = = = = = = = = = Top silhouette score:',
+    'source1-tSNE-P31objset-1Hot-Perplexity_2-LearningRate_150-Iterations_15000-KmeansClusters_65-AvgSilhouette_0.86559206.pickle',
     'source1-tSNE-P31objset-1Hot-Perplexity_2-LearningRate_150-Iterations_15000-KmeansClusters_65-AvgSilhouette_0.8682144.pickle',
     ' = = = = = = = = = = ',
-    'source1-tSNE-P31objset-NLP-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_50-AvgSilhouette_0.500595.pickle'
+    'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_200-Iterations_15000-KmeansClusters_90-AvgSilhouette_0.5741877.pickle',
+    'source1-tSNE-P31objset-NLP-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_50-AvgSilhouette_0.500595.pickle',
+    'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_100-Iterations_12500-KmeansClusters_65-AvgSilhouette_0.5196672.pickle'
 ]
 # Formatting text for readability in dropdown
 menu_items = [ m.replace("source1-tSNE-P31objset-", "")
@@ -104,7 +107,7 @@ b.on_click(button_handler)
 
 
 div = Div(text="""
-          Select settings and click "Load Visualization"<br>(1) Node labels on or off, <br>(2) Dataset source
+          Select the following settings and click "Load Visualization":<br>(1) Node labels on or off, <br>(2) Dataset source
           <br> <hr> """, 
           width=500, height=100, style={'font-size': '14px'})
 
