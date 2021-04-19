@@ -82,8 +82,9 @@ p = figure(title = "Clusters of language locales by P31_obj_set localization fre
 menu_items = [' ',
     ' = = = = = = = = = = Top silhouette score:',
     'source1-tSNE-Langs-Perplexity_25-LearningRate_200-Iterations_12500-KmeansClusters_5-AvgSilhouette_0.7744107.pickle',
-    # 'source1-tSNE-Langs-Perplexity_30-LearningRate_250-Iterations_7500-KmeansClusters_5-AvgSilhouette_0.7843169.pickle',
-    ' = = = = = = = = = = '
+    '2021-11-04 data:',
+    'source1-tSNE-Langs-Perplexity_30-LearningRate_250-Iterations_7500-KmeansClusters_5-AvgSilhouette_0.7843169.pickle',
+    ' = = = = = = = = = = ',
     'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.5356258.pickle',
     'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.4785947.pickle',
     'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.49775645.pickle',
@@ -148,7 +149,7 @@ div = Div(text="""
 row1 = column(div,c,s,b)
 
 # para = Paragraph(text="""GitHub source: """, width=200, height=500)
-para = Div(text="<br><br> GitHub source: TBA <br><br><br><br><br><br><br>", 
+para = Div(text="<br><br> GitHub source: TBA <br><br><br><br>", 
           width=500, height=500, style={})
 
 theme = {
@@ -247,7 +248,7 @@ menu_items2 = [' ',
     'source1-tSNE-P31objset-1Hot-Perplexity_2-LearningRate_150-Iterations_15000-KmeansClusters_65-AvgSilhouette_0.86559206.pickle',
     ' = = = = = = = = = = = = BERT Transformer Encoding: ',
     'source1-tSNE-P31objset-NLP-stsb-roberta-large-Perplexity_2-LearningRate_300-Iterations_2500-KmeansClusters_400-AvgSilhouette_0.71771604.pickle',
-    'source1-tSNE-P31objset-NLP-stsb-roberta-large-Perplexity_2-LearningRate_200-Iterations_7500-KmeansClusters_325-AvgSilhouette_0.7104604.pickle',
+    # 'source1-tSNE-P31objset-NLP-stsb-roberta-large-Perplexity_2-LearningRate_200-Iterations_7500-KmeansClusters_325-AvgSilhouette_0.7104604.pickle',
     '',
     ' = = = = = = = = = = = = Misc. runs: ',
     'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_200-Iterations_15000-KmeansClusters_90-AvgSilhouette_0.5741877.pickle',
