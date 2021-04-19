@@ -228,7 +228,7 @@ show_labels2 = True
 
 
 # Figure and Dropdown menu
-p2 = figure(title = "Clusters of P31_obj_set by their localization frequency across languages",
+p2 = figure(title = "Clusters of P31_obj_set by 1-hot encoded vectors and BERT sentence embeddings",
            background_fill_color='whitesmoke',  # gainsboro
            # tools=TOOLS, 
            toolbar_location='below',
@@ -246,6 +246,7 @@ menu_items2 = [' ',
     ' = = = = = = = = = = = = 1 Hot Encoding: ',
     'source1-tSNE-P31objset-1Hot-Perplexity_2-LearningRate_150-Iterations_15000-KmeansClusters_65-AvgSilhouette_0.86559206.pickle',
     ' = = = = = = = = = = = = BERT Transformer Encoding: ',
+    'source1-tSNE-P31objset-NLP-stsb-roberta-large-Perplexity_2-LearningRate_300-Iterations_2500-KmeansClusters_400-AvgSilhouette_0.71771604.pickle',
     'source1-tSNE-P31objset-NLP-stsb-roberta-large-Perplexity_2-LearningRate_200-Iterations_7500-KmeansClusters_325-AvgSilhouette_0.7104604.pickle',
     '',
     ' = = = = = = = = = = = = Misc. runs: ',
