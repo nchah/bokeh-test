@@ -82,7 +82,7 @@ p = figure(title = "Clusters of language locales by P31_obj_set localization fre
 menu_items = [' ',
     ' = = = = = = = = = = Top silhouette score:',
     'source1-tSNE-Langs-Perplexity_25-LearningRate_200-Iterations_12500-KmeansClusters_5-AvgSilhouette_0.7744107.pickle',
-    'source1-tSNE-Langs-Perplexity_30-LearningRate_250-Iterations_7500-KmeansClusters_5-AvgSilhouette_0.7843169.pickle',
+    # 'source1-tSNE-Langs-Perplexity_30-LearningRate_250-Iterations_7500-KmeansClusters_5-AvgSilhouette_0.7843169.pickle',
     ' = = = = = = = = = = '
     'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.5356258.pickle',
     'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.4785947.pickle',
