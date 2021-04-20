@@ -149,8 +149,8 @@ div = Div(text="""
 row1 = column(div,c,s,b)
 
 # para = Paragraph(text="""GitHub source: """, width=200, height=500)
-para = Div(text="<br><br> GitHub source: TBA <br><br><br><br>", 
-          width=500, height=500, style={})
+para = Div(text="<br><br> GitHub source: TBA <br>", 
+          width=500, height=150, style={})
 
 theme = {
 'attrs' : {
@@ -280,7 +280,7 @@ row2 = column(div2,c2,s2,b2)
 
 # para = Paragraph(text="""GitHub source: """, width=200, height=500)
 para2 = Div(text="<br><br> GitHub source: TBA <br><br><br><br><br><br><br>", 
-          width=500, height=500, style={})
+          width=500, height=150, style={})
 
 
 
