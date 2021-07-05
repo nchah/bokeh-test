@@ -284,8 +284,9 @@ para2 = Div(text="<br><br> GitHub source: TBA <br><br><br><br><br><br><br>",
 
 
 
-
-
+# # # # # # # # # # # # # # 
+# # 
+# # # # # # # # # # # # # # 
 
 curdoc().title = "Bokeh Application"
 curdoc().theme = Theme(json=theme) #"dark_minimal"
@@ -301,4 +302,55 @@ curdoc().add_root(p2)
 curdoc().add_root(row2)
 curdoc().add_root(para2)
 
+
+
+# # # # # # # # # # # # # # 
+# # Heatmap
+# # # # # # # # # # # # # # 
+
+def dropdown_handler(event3):
+    # global div_image
+    heatmaps = {
+        'Heatmap with subplots, by cluster': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-subplots-all.png',
+        'Heatmap with all in one, log-scale': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K.png',
+        'Heatmap with all in one, percents': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-percents.png'
+    }
+    div_image = Div(text="""
+        <img src="">
+        <br><br><br>""", 
+        width=500, height=150
+        )
+    div_image.text = """<img src="https://github.com/nchah/bokeh-test/blob/main/images/{}?raw=true" >""".format(heatmaps[event3.item])
+    curdoc().add_root(div_image)
+
+
+heatmap_intro = Div(text="""<h3>Heatmaps</h3>""",
+    width=500, height=100, style={'font-size': '18px'}
+    )
+heatmap_end = Div(text="""<br><br><br>""",
+    width=500, height=10, style={'font-size': '18px'}
+    )
+
+menu_items3 = [
+    'Heatmap with all in one, log-scale',
+    'Heatmap with all in one, percents',
+    'Heatmap with subplots, by cluster'
+]
+# dropdown menu that loads graph automatically
+d = Dropdown(label='Load Heatmap', width=500, menu=menu_items3,
+             button_type='primary',
+             # background='blue',
+             # margin=(5, 5, 5, 20)
+             )
+d.on_click(dropdown_handler)
+
+div_image = Div(text="""
+    <img src="" alt="div_image">
+    <br><br><br>""", 
+    width=500, height=150
+    )
+
+curdoc().add_root(heatmap_intro)
+curdoc().add_root(d)
+curdoc().add_root(heatmap_end)
 
