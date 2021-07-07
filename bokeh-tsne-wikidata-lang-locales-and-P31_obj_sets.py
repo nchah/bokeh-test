@@ -324,8 +324,15 @@ def dropdown_handler(event3):
     curdoc().add_root(div_image)
 
 
-heatmap_intro = Div(text="""<h3>Heatmaps</h3>""",
-    width=500, height=100, style={'font-size': '18px'}
+heatmap_intro = Div(text="""<h3>Heatmaps</h3>
+
+    Language Legend: <br>
+    "'en': English, 'pt': Portuguese, 'es': Spanish, 'it': Italian, 'fr': French, 'de': Standard German, 'ru': Russian, 'tr': Turkish, 'ar': Standard Arabic, 'arz': Egyptian Spoken Arabic, 
+    'ha': Hausa, 'ss': Swahili, 'fa': Iranian Persian, 'hi': Hindi, 'bn': Bengali, 'ur': Urdu, 'mr': Marathi, 
+    'te': Telugu, 'pa': Western Punjabi, 'gu': Gujarati, 'ta': Tamil, 'th': Thai, 'vi': Vietnamese, 
+    'id': Indonesian, 'jv': Javanese, 'zh': Mandarin Chinese, 'wuu': Wu Chinese, 'yue': Yue Chinese, 'ko': Korean, 'ja': Japanese"
+    """,
+    width=1500, height=150, style={'font-size': '14px'}
     )
 heatmap_end = Div(text="""<br><br><br>""",
     width=500, height=10, style={'font-size': '18px'}
