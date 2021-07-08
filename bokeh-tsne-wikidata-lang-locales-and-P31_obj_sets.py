@@ -311,9 +311,9 @@ curdoc().add_root(para2)
 def dropdown_handler(event3):
     # global div_image
     heatmaps = {
-        'Heatmap with subplots, by cluster': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount-subplots-all.png',
-        'Heatmap with all in one, log-scale': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount.png',
-        'Heatmap with all in one, percents': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-percents.png'
+        'Label Localization Heatmap with subplots, by cluster': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount-subplots-all.png',
+        'Label Localization Heatmap, all in one, log-scale': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount.png',
+        'Label Localization Heatmap, all in one, percents': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-percents.png'
     }
     div_image = Div(text="""
         <img src="">
@@ -339,9 +339,9 @@ heatmap_end = Div(text="""<br><br><br>""",
     )
 
 menu_items3 = [
-    'Heatmap with all in one, log-scale',
-    'Heatmap with all in one, percents',
-    'Heatmap with subplots, by cluster'
+    'Label Localization Heatmap, all in one, log-scale',
+    'Label Localization Heatmap, all in one, percents',
+    'Label Localization Heatmap with subplots, by cluster'
 ]
 # dropdown menu that loads graph automatically
 d = Dropdown(label='Load Heatmap', width=500, menu=menu_items3,
