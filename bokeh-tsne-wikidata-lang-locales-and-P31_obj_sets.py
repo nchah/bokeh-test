@@ -313,7 +313,7 @@ def dropdown_handler(event3):
     heatmaps = {
         'Label Localization Heatmap with subplots, by cluster': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount-subplots-all.png',
         'Label Localization Heatmap, all in one, log-scale': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount.png',
-        'Label Localization Heatmap, all in one, log-scale (annotated)': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount-annot.png'
+        'Label Localization Heatmap, all in one, log-scale (annotated)': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount-annot.png',
         'Label Localization Heatmap, all in one, percents': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-percents.png'
     }
     div_image = Div(text="""
