@@ -314,7 +314,11 @@ def dropdown_handler(event3):
         'Label Localization Heatmap with subplots, by cluster': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount-subplots-all.png',
         'Label Localization Heatmap, all in one, log-scale': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount.png',
         'Label Localization Heatmap, all in one, log-scale (annotated)': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-logCount-annot.png',
-        'Label Localization Heatmap, all in one, percents': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-percents.png'
+        'Label Localization Heatmap, all in one, percents': 'heatmap-P31-obj-sets-xlabel-top30langsW2E-count1K-percents.png',
+        'Alias Localization Heatmap, all in one, log-scale': 'heatmap-P31-obj-sets-xalias-top30langsW2E-count1K-logCount.png',
+        'Alias Localization Heatmap, all in one, log-scale (annotated)': 'heatmap-P31-obj-sets-xalias-top30langsW2E-count1K-logCount-annot.png',
+        'Desc. Localization Heatmap, all in one, log-scale': 'heatmap-P31-obj-sets-xdesc-top30langsW2E-count1K-logCount.png',
+        'Desc. Localization Heatmap, all in one, log-scale (annotated)': 'heatmap-P31-obj-sets-xdesc-top30langsW2E-count1K-logCount-annot.png'
     }
     div_image = Div(text="""
         <img src="">
@@ -344,6 +348,12 @@ menu_items3 = [
     'Label Localization Heatmap, all in one, log-scale (annotated)',
     'Label Localization Heatmap, all in one, percents',
     'Label Localization Heatmap with subplots, by cluster'
+    '...',
+    'Alias Localization Heatmap, all in one, log-scale',
+    'Alias Localization Heatmap, all in one, log-scale (annotated)',
+    'Desc. Localization Heatmap, all in one, log-scale',
+    'Desc. Localization Heatmap, all in one, log-scale (annotated)',
+
 ]
 # dropdown menu that loads graph automatically
 d = Dropdown(label='Load Heatmap', width=500, menu=menu_items3,
