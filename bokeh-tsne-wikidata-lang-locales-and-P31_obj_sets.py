@@ -341,8 +341,8 @@ heatmap_end = Div(text="""<br><br><br>""",
 
 menu_items3 = [
     'Label Localization Heatmap, all in one, log-scale',
-    'Label Localization Heatmap, all in one, percents',
     'Label Localization Heatmap, all in one, log-scale (annotated)',
+    'Label Localization Heatmap, all in one, percents',
     'Label Localization Heatmap with subplots, by cluster'
 ]
 # dropdown menu that loads graph automatically
