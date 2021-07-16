@@ -347,13 +347,12 @@ menu_items3 = [
     'Label Localization Heatmap, all in one, log-scale',
     'Label Localization Heatmap, all in one, log-scale (annotated)',
     'Label Localization Heatmap, all in one, percents',
-    'Label Localization Heatmap with subplots, by cluster'
+    'Label Localization Heatmap with subplots, by cluster',
     '...',
     'Alias Localization Heatmap, all in one, log-scale',
     'Alias Localization Heatmap, all in one, log-scale (annotated)',
     'Desc. Localization Heatmap, all in one, log-scale',
-    'Desc. Localization Heatmap, all in one, log-scale (annotated)',
-
+    'Desc. Localization Heatmap, all in one, log-scale (annotated)'
 ]
 # dropdown menu that loads graph automatically
 d = Dropdown(label='Load Heatmap', width=500, menu=menu_items3,
