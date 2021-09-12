@@ -85,7 +85,7 @@ menu_items = [' ',
     '2021-06-30 data:',
     'source1-tSNE-Langs-Perplexity_20-LearningRate_350-Iterations_5000-KmeansClusters_7-AvgSilhouette_0.7880588.pickle',
     'source1-tSNE-Langs-Perplexity_25-LearningRate_300-Iterations_15000-KmeansClusters_6-AvgSilhouette_0.78538346.pickle',
-    '-',
+    '\n',
     'source1-tSNE-Langs-xlabel-Perplexity_20-LearningRate_300-Iterations_10000-KmeansClusters_6-AvgSilhouette_0.7859347.pickle',
     'source1-tSNE-Langs-xlabel-desc-alias-Perplexity_50-LearningRate_300-Iterations_15000-KmeansClusters_9-AvgSilhouette_0.8404159.pickle',
     ' = = = = = = = = = = ',
@@ -204,7 +204,8 @@ def button_handler2(event2):
     # Add node labels
     print("show_labels: " + str(show_labels2))
     if show_labels2 == True:
-        labels = LabelSet(x='x', y='y', text='P31_obj_set_id_label', text_font='helvetica', text_font_size='12px',
+        labels = LabelSet(x='x', y='y', text='P31_obj_set_id_label', 
+                text_font='helvetica', text_color='black', text_alpha=0.5, text_font_size='8px',
                 x_offset=5, y_offset=5, source=source2,
                 render_mode='canvas') #render_mode='canvas' or 'css')
         p2.add_layout(labels)
@@ -313,6 +314,10 @@ curdoc().add_root(para)
 curdoc().add_root(p2)
 curdoc().add_root(row2)
 curdoc().add_root(para2)
+
+
+
+
 
 
 
