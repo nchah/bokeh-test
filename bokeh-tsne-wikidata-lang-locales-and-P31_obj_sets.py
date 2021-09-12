@@ -32,7 +32,8 @@ def button_handler(event):
     # Add node labels
     print("show_labels: " + str(show_labels))
     if show_labels == True:
-        labels = LabelSet(x='x', y='y', text='lang', text_font='helvetica', text_font_size='12px',
+        labels = LabelSet(x='x', y='y', text='lang', 
+                text_font='helvetica', text_color='black', text_alpha=0.5, text_font_size='8px',
                 x_offset=5, y_offset=5, source=source1,
                 render_mode='canvas') #render_mode='canvas' or 'css')
         p.add_layout(labels)
@@ -81,7 +82,16 @@ p = figure(title = "Clusters of language locales by P31_obj_set localization fre
 
 menu_items = [' ',
     ' = = = = = = = = = = Top silhouette score:',
+    '2021-06-30 data:',
+    'source1-tSNE-Langs-Perplexity_20-LearningRate_350-Iterations_5000-KmeansClusters_7-AvgSilhouette_0.7880588.pickle',
+    'source1-tSNE-Langs-Perplexity_25-LearningRate_300-Iterations_15000-KmeansClusters_6-AvgSilhouette_0.78538346.pickle',
+    '-',
+    'source1-tSNE-Langs-xlabel-Perplexity_20-LearningRate_300-Iterations_10000-KmeansClusters_6-AvgSilhouette_0.7859347.pickle',
+    'source1-tSNE-Langs-xlabel-desc-alias-Perplexity_50-LearningRate_300-Iterations_15000-KmeansClusters_9-AvgSilhouette_0.8404159.pickle',
+    ' = = = = = = = = = = ',
+    '2021-03-01 data:',
     'source1-tSNE-Langs-Perplexity_25-LearningRate_200-Iterations_12500-KmeansClusters_5-AvgSilhouette_0.7744107.pickle',
+    ' = = = = = = = = = = ',
     '2021-11-04 data:',
     'source1-tSNE-Langs-Perplexity_30-LearningRate_250-Iterations_7500-KmeansClusters_5-AvgSilhouette_0.7843169.pickle',
     ' = = = = = = = = = = ',
@@ -90,7 +100,7 @@ menu_items = [' ',
     'source1-tSNE-Langs-Perplexity_5-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.49775645.pickle',
     'source1-tSNE-Langs-Perplexity_5-LearningRate_200-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.5187296.pickle',
     'source1-tSNE-Langs-Perplexity_5-LearningRate_200-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.49838758.pickle',
-    'source1-tSNE-Langs-Perplexity_5-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.5186522.pickle'
+    'source1-tSNE-Langs-Perplexity_5-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.5186522.pickle',
     'source1-tSNE-Langs-Perplexity_10-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.61021835.pickle',
     'source1-tSNE-Langs-Perplexity_10-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.57772136.pickle',
     'source1-tSNE-Langs-Perplexity_10-LearningRate_100-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.62639225.pickle',
@@ -253,7 +263,9 @@ menu_items2 = [' ',
     ' = = = = = = = = = = = = Misc. runs: ',
     'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_200-Iterations_15000-KmeansClusters_90-AvgSilhouette_0.5741877.pickle',
     'source1-tSNE-P31objset-NLP-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_50-AvgSilhouette_0.500595.pickle',
-    'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_100-Iterations_12500-KmeansClusters_65-AvgSilhouette_0.5196672.pickle'
+    'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_100-Iterations_12500-KmeansClusters_65-AvgSilhouette_0.5196672.pickle',
+    ' = = = = = = = = = = ',
+    'source1-tSNE-P31objset-1Hot-Perplexity_10-LearningRate_300-Iterations_12500-KmeansClusters_80-AvgSilhouette_0.5726532.pickle'
 ]
 # Formatting text for readability in dropdown
 menu_items2 = [ m.replace("source1-tSNE-P31objset-", "")
