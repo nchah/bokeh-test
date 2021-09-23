@@ -255,6 +255,9 @@ p2 = figure(title = "Clusters of P31_obj_set by 1-hot encoded vectors and BERT s
 
 menu_items2 = [' ',
     ' = = = = = = = = = = Top silhouette score:',
+    ' = = = = = = = = = = Multilingual: label data ',
+    'source1-tSNE-P31objset-xlabel-Multilingual-NLP-stsb-xlm-r-multilingual-Perplexity_2-LearningRate_300-Iterations_7500-KmeansClusters_300-AvgSilhouette_0.7001874.pickle',
+    '\n',
     ' = = = = = = = = = = = = 1 Hot Encoding: ',
     'source1-tSNE-P31objset-1Hot-Perplexity_2-LearningRate_150-Iterations_15000-KmeansClusters_65-AvgSilhouette_0.86559206.pickle',
     ' = = = = = = = = = = = = BERT Transformer Encoding: ',
