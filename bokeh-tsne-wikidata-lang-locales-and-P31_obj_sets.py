@@ -15,7 +15,7 @@ def button_handler(event):
     global runtime, source1, show_labels
 
     # Load from source, then update data source on additional selections
-    sourcefile = "source1-" + s.value.replace(": ", "_").replace(", ", "-") + ".pickle"
+    sourcefile = "source1-tSNE-Langs-" + s.value.replace(": ", "_").replace(", ", "-") + ".pickle"
     print('source1 data: ' + s.value)
     if runtime == 0:
         source1_data = pickle.load(open('source1-data-langs/' + sourcefile,'rb'))
@@ -89,7 +89,7 @@ menu_items = [' ',
     '2021-06-30 data:',
     ' = = = = = = = = = = label, desc, alias data',
     'source1-tSNE-Langs-xlabel-desc-alias-Perplexity_50-LearningRate_300-Iterations_15000-KmeansClusters_9-AvgSilhouette_0.8404159.pickle',
-    'source1-tSNE-Langs-xlabel-desc-alias-MIN_SET_COUNT1-Perplexity_50-LearningRate_200-Iterations_5000-KmeansClusters_9-AvgSilhouette_0.8419827.pickle',
+    'source1-tSNE-Langs-xlabel-desc-alias-minSetCount_1-Perplexity_50-LearningRate_200-Iterations_5000-KmeansClusters_9-AvgSilhouette_0.8419827.pickle',
     ' = = = = = = = = = = label data',
     'source1-tSNE-Langs-xlabel-Perplexity_20-LearningRate_300-Iterations_10000-KmeansClusters_6-AvgSilhouette_0.7859347.pickle',
     'source1-tSNE-Langs-xlabel-Perplexity_20-LearningRate_350-Iterations_5000-KmeansClusters_7-AvgSilhouette_0.7880588.pickle',
@@ -133,7 +133,7 @@ menu_items = [' ',
     'source1-tSNE-Langs-xlabel-Perplexity_40-LearningRate_200-Iterations_7000-KmeansClusters_5-AvgSilhouette_0.6542868.pickle'
 ]
 # Formatting text for readability in dropdown
-menu_items = [ m.replace("source1-", "")
+menu_items = [ m.replace("source1-tSNE-Langs-", "")
                 .replace(".pickle", "")
                 .replace("-", ", ").replace("_", ": ") for m in menu_items]
 
