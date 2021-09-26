@@ -19,11 +19,15 @@ def button_handler(event):
     print('source1 data: ' + s.value)
     if runtime == 0:
         source1_data = pickle.load(open('source1-data-langs/' + sourcefile,'rb'))
+        # Replace light yellow color => green
+        source1_data['colors'] = ['#1a6318' if x=='#ceff29' else x for x in source1_data['colors'] ]
         source1_df = pd.DataFrame(source1_data, columns=source1_data.keys())
         source1 = ColumnDataSource(source1_df)  # can also load directly from dict instead of pandas
     elif runtime > 0:
         source1.data = pickle.load(open('source1-data-langs/' + sourcefile,'rb'))
+    # print(source1_data)
     # print(source1_df)
+    # print(source1)
 
     # Scatter plot
     p.scatter(source=source1, x="x", y="y", color="colors", fill_alpha=0.7, size=5)
@@ -33,7 +37,7 @@ def button_handler(event):
     print("show_labels: " + str(show_labels))
     if show_labels == True:
         labels = LabelSet(x='x', y='y', text='lang', 
-                text_font='helvetica', text_color='black', text_alpha=0.5, text_font_size='8px',
+                text_font='helvetica', text_color='black', text_alpha=0.9, text_font_size='10px',
                 x_offset=5, y_offset=5, source=source1,
                 render_mode='canvas') #render_mode='canvas' or 'css')
         p.add_layout(labels)
@@ -83,15 +87,17 @@ p = figure(title = "Clusters of language locales by P31_obj_set localization fre
 menu_items = [' ',
     ' = = = = = = = = = = Top silhouette score:',
     '2021-06-30 data:',
+    ' = = = = = = = = = = label, desc, alias data',
     'source1-tSNE-Langs-xlabel-desc-alias-Perplexity_50-LearningRate_300-Iterations_15000-KmeansClusters_9-AvgSilhouette_0.8404159.pickle',
+    'source1-tSNE-Langs-xlabel-desc-alias-MIN_SET_COUNT1-Perplexity_50-LearningRate_200-Iterations_5000-KmeansClusters_9-AvgSilhouette_0.8419827.pickle',
+    ' = = = = = = = = = = label data',
     'source1-tSNE-Langs-xlabel-Perplexity_20-LearningRate_300-Iterations_10000-KmeansClusters_6-AvgSilhouette_0.7859347.pickle',
     'source1-tSNE-Langs-xlabel-Perplexity_20-LearningRate_350-Iterations_5000-KmeansClusters_7-AvgSilhouette_0.7880588.pickle',
     'source1-tSNE-Langs-xlabel-Perplexity_25-LearningRate_300-Iterations_15000-KmeansClusters_6-AvgSilhouette_0.78538346.pickle',
-    ' = = = = = = = = = = ',
+    '\n',
     '2021-03-01 data:',
     'source1-tSNE-Langs-xlabel-Perplexity_25-LearningRate_200-Iterations_12500-KmeansClusters_5-AvgSilhouette_0.7744107.pickle',
-    ' = = = = = = = = = = ',
-    '2021-11-04 data:',
+    '2020-11-04 data:',
     'source1-tSNE-Langs-xlabel-Perplexity_30-LearningRate_250-Iterations_7500-KmeansClusters_5-AvgSilhouette_0.7843169.pickle',
     'source1-tSNE-Langs-xlabel-Perplexity_5-LearningRate_100-Iterations_10000-KmeansClusters_5-AvgSilhouette_0.5356258.pickle',
     'source1-tSNE-Langs-xlabel-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_5-AvgSilhouette_0.4785947.pickle',
@@ -253,19 +259,19 @@ p2 = figure(title = "Clusters of P31_obj_set by 1-hot encoded vectors and BERT s
 
 menu_items2 = [' ',
     ' = = = = = = = = = = Top silhouette score:',
-    '2021-06-30 data:',
+    '2021-06-30 data:',    
     ' = = = = = = = = = = Multilingual: label, desc, alias data ',
     'source1-tSNE-P31objset-xlabel-desc-alias-Multilingual-NLP-stsb-xlm-r-multilingual-Perplexity_1-LearningRate_100-Iterations_12500-KmeansClusters_350-AvgSilhouette_0.81678754.pickle',
     ' = = = = = = = = = = Multilingual: label data ',
     'source1-tSNE-P31objset-xlabel-Multilingual-NLP-stsb-xlm-r-multilingual-Perplexity_2-LearningRate_300-Iterations_7500-KmeansClusters_300-AvgSilhouette_0.7001874.pickle',
     '\n',
-    ' = = = = = = = = = = = = 1 Hot Encoding: ',
+    ' = = = = = = = = = = 1 Hot Encoding: ',
     'source1-tSNE-P31objset-1Hot-Perplexity_2-LearningRate_150-Iterations_15000-KmeansClusters_65-AvgSilhouette_0.86559206.pickle',
-    ' = = = = = = = = = = = = BERT Transformer Encoding: ',
+    ' = = = = = = = = = = BERT Transformer Encoding: ',
     'source1-tSNE-P31objset-NLP-stsb-roberta-large-Perplexity_2-LearningRate_300-Iterations_2500-KmeansClusters_400-AvgSilhouette_0.71771604.pickle',
     # 'source1-tSNE-P31objset-NLP-stsb-roberta-large-Perplexity_2-LearningRate_200-Iterations_7500-KmeansClusters_325-AvgSilhouette_0.7104604.pickle',
-    '',
-    ' = = = = = = = = = = = = Misc. runs: ',
+    '\n',
+    ' = = = = = = = = = = Misc. runs: ',
     'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_200-Iterations_15000-KmeansClusters_90-AvgSilhouette_0.5741877.pickle',
     'source1-tSNE-P31objset-NLP-Perplexity_5-LearningRate_100-Iterations_5000-KmeansClusters_50-AvgSilhouette_0.500595.pickle',
     'source1-tSNE-P31objset-NLP-Perplexity_2-LearningRate_100-Iterations_12500-KmeansClusters_65-AvgSilhouette_0.5196672.pickle',
