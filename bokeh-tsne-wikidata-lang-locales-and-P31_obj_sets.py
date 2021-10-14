@@ -163,7 +163,9 @@ div = Div(text="""
 row1 = column(div,c,s,b)
 
 # para = Paragraph(text="""GitHub source: """, width=200, height=500)
-para = Div(text="<br><br> GitHub source: TBA <br>", 
+para = Div(text="<br><br> GitHub source: \
+    <a href='https://github.com/nchah/wikidata-widar'>wikidata-widar<br> \
+    <br><br><br><br>", 
           width=500, height=150, style={})
 
 theme = {
@@ -259,7 +261,10 @@ p2 = figure(title = "Clusters of P31_obj_set by 1-hot encoded vectors and BERT s
 
 menu_items2 = [' ',
     ' = = = = = = = = = = Top silhouette score:',
-    '2021-06-30 data:',    
+    '2021-06-30 data:',
+    ' = = = = = = = = = = en only: label, desc data ',
+    'source1-tSNE-P31objset-xlabel-desc-NLP-all-mpnet-base-v2-Perplexity_1-LearningRate_300-Iterations_10000-KmeansClusters_375-AvgSilhouette_0.819272.pickle',
+    'source1-tSNE-P31objset-xlabel-desc-NLP-stsb-roberta-large-Perplexity_1-LearningRate_300-Iterations_12500-KmeansClusters_375-AvgSilhouette_0.80598605.pickle',
     ' = = = = = = = = = = Multilingual: label, desc, alias data ',
     'source1-tSNE-P31objset-xlabel-desc-alias-Multilingual-NLP-stsb-xlm-r-multilingual-Perplexity_1-LearningRate_100-Iterations_12500-KmeansClusters_350-AvgSilhouette_0.81678754.pickle',
     ' = = = = = = = = = = Multilingual: label data ',
@@ -302,7 +307,7 @@ div2 = Div(text="""
 row2 = column(div2,c2,s2,b2)
 
 # para = Paragraph(text="""GitHub source: """, width=200, height=500)
-para2 = Div(text="<br><br> GitHub source: TBA <br><br><br><br><br><br><br>", 
+para2 = Div(text="<br><br> <br><br><br><br><br><br><br>", 
           width=500, height=150, style={})
 
 
